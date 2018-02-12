@@ -8,6 +8,8 @@ class Triangle
   def triangle_checker()
     if (@side1 == @side2) & (@side2 == @side3)
       return "This is an equilateral triangle"
+    elsif (@side1 == @side2) | (@side2 == @side3) | (@side1 == @side3)
+      return "This is an isosceles triangle"
     end
   end
 
