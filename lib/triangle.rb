@@ -6,13 +6,16 @@ class Triangle
   end
 
   def triangle_checker()
-    if (@side1 == @side2) & (@side2 == @side3)
+    if (@side1 + @side2 < @side3) | (@side2 + @side3 < @side1) | (@side1 + @side3 < @side2)
+      return "This is not a triangle"
+    elsif (@side1 == @side2) & (@side2 == @side3)
       return "This is an equilateral triangle"
     elsif (@side1 == @side2) | (@side2 == @side3) | (@side1 == @side3)
       return "This is an isosceles triangle"
+    else
+      return "This is an scalene triangle"
     end
   end
-
 end
 # $(document).ready(function() {
 #   $("#triangle").submit(function (event) {
